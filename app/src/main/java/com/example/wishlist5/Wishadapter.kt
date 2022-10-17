@@ -12,13 +12,11 @@ class Wishadapter(private val wishes: List<Wish>) : RecyclerView.Adapter<Wishada
     class ViewHolder (itemView: View) : RecyclerView.ViewHolder(itemView) {
 
         val itemTV : TextView
-        val linkTV: TextView
         val priceTV: TextView
 
         init {
 
             itemTV = itemView.findViewById(R.id.itemTV)
-            linkTV  = itemView.findViewById(R.id.linkTV)
             priceTV = itemView.findViewById(R.id.priceTV)
 
 
@@ -42,7 +40,6 @@ class Wishadapter(private val wishes: List<Wish>) : RecyclerView.Adapter<Wishada
         val wish = wishes.get(position)
         // Set item views based on views and data model
         holder.itemTV.text = wish.item
-        holder.linkTV.text = wish.link
         holder.priceTV.text = wish.price
     }
 

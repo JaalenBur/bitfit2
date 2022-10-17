@@ -8,13 +8,11 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.recyclerview.Wish
 import com.example.recyclerview.Wishadapter
-import com.example.wishlist5.R
 import java.util.*
 
 class MainActivity : AppCompatActivity() {
     lateinit var item: EditText
-    lateinit var price: EditText
-    lateinit var link: EditText
+    lateinit var calories: EditText
     lateinit var button: Button
     lateinit var wishes: MutableList<Wish>
     lateinit var wishRV: RecyclerView
@@ -26,8 +24,7 @@ class MainActivity : AppCompatActivity() {
 
 
         item = findViewById(R.id.Item)
-        price = findViewById(R.id.Price)
-        link = findViewById(R.id.Link)
+        calories = findViewById(R.id.Calories)
         button = findViewById(R.id.button)
         wishRV = findViewById(R.id.wishRV)
 
@@ -41,13 +38,12 @@ class MainActivity : AppCompatActivity() {
 
 
         button.setOnClickListener {
-            val wish = Wish(item.text.toString(),price.text.toString(),link.text.toString())
+            val wish = Wish(item.text.toString(),calories.text.toString())
             wishes.add(wish)
             wishlistAdapter.notifyDataSetChanged()
 
             item.text.clear()
-            price.text.clear()
-            link.text.clear()
+            calories.text.clear()
 
             wishRV.smoothScrollToPosition(wishes.lastIndex)
 
