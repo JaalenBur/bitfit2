@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.wishlist5.R
 import com.example.wishlist5.MainActivity
 
-class Wishadapter(private val wishes: List<Wish>) : RecyclerView.Adapter<Wishadapter.ViewHolder>() {
+class Wishadapter (private val wishes: List<Wish>) : RecyclerView.Adapter<Wishadapter.ViewHolder>() {
     class ViewHolder (itemView: View) : RecyclerView.ViewHolder(itemView) {
 
         val itemTV : TextView

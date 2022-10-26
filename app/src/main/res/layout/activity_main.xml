@@ -12,7 +12,7 @@
         android:layout_width="174dp"
         android:layout_height="44dp"
         android:layout_marginStart="4dp"
-        android:layout_marginBottom="44dp"
+        android:layout_marginBottom="112dp"
         android:hint="Food item"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -21,6 +21,7 @@
         android:id="@+id/Calories"
         android:layout_width="117dp"
         android:layout_height="45dp"
+        android:layout_marginBottom="8dp"
         android:ems="10"
         android:inputType="numberDecimal"
         app:layout_constraintBottom_toTopOf="@+id/button"
@@ -32,6 +33,8 @@
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="64dp"
         android:text="Submit"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -46,6 +49,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:menu="@menu/menu_bottom_navigation"
+        tools:layout_editor_absoluteX="4dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
